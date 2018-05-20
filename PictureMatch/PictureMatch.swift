@@ -8,9 +8,16 @@
 
 import Foundation
 
-class pictureMatch
+protocol PictureMatchDelegate: class {
+    func gameWasWon()
+    func wasReset()
+}
+
+class PictureMatch
 {
     private(set) var cards = [Card]()
+    
+    weak var delegate: PictureMatchDelegate?
     
     private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
@@ -47,18 +54,52 @@ class pictureMatch
                 indexOfOneAndOnlyFaceUpCard = index
             }
         }
+        if allMatched() {
+            delegate?.gameWasWon()
+            
+        }
     }
-
+    func resetCard() {
+        for index in cards.indices {
+            cards[index].reset()
+        }
+        cards.shuffle()
+        delegate?.wasReset()
+        
+    }
+    
     init(numberOfPairsOfCards: Int) {
         assert(numberOfPairsOfCards > 0, "PictureMatch.init(\(numberOfPairsOfCards)): must have at least one pair of cards")
         for _ in 0..<numberOfPairsOfCards
         {
-        let card = Card()
+            let card = Card()
             cards += [card, card]
         }
-    //TODO Shuffle the cards
+        cards.shuffle()
+        
     }
-
+    func allMatched() -> Bool {
+        var allMatched = true
+        for card in cards {
+            if card.isMatched == false {
+                allMatched = false
+                break
+            }
+        }
+        return allMatched
+    }
+    
+}
+extension Array
+{
+    /** Randomizes the order of an array's elements. */
+    mutating func shuffle()
+    {
+        for _ in 0..<self.count
+        {
+            sort { (_,_) in arc4random() < arc4random() }
+        }
+    }
 }
 
 

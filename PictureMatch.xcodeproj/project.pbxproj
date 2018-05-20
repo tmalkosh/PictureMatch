@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2146A620B21A0100A95E33 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2146A520B21A0100A95E33 /* CardCollectionViewCell.swift */; };
 		5A30775120841C620011C27B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30775020841C620011C27B /* AppDelegate.swift */; };
 		5A30775320841C620011C27B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30775220841C620011C27B /* ViewController.swift */; };
 		5A30775620841C620011C27B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A30775420841C620011C27B /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A2146A520B21A0100A95E33 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A30774D20841C620011C27B /* PictureMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A30775020841C620011C27B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A30775220841C620011C27B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				5A3077632084405E0011C27B /* PictureMatch.swift */,
 				5A3077652084411F0011C27B /* Card.swift */,
 				5A30775C20841C620011C27B /* Info.plist */,
+				5A2146A520B21A0100A95E33 /* CardCollectionViewCell.swift */,
 			);
 			path = PictureMatch;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				5A30775320841C620011C27B /* ViewController.swift in Sources */,
 				5A3077642084405E0011C27B /* PictureMatch.swift in Sources */,
 				5A30775120841C620011C27B /* AppDelegate.swift in Sources */,
+				5A2146A620B21A0100A95E33 /* CardCollectionViewCell.swift in Sources */,
 				5A3077662084411F0011C27B /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
